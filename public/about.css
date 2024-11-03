@@ -1,0 +1,147 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: #333;
+    padding-bottom: 2rem;
+}
+
+/* Navbar */
+.nav-container {
+    padding: 1.2rem;
+    position: sticky;
+    top: 0;
+    background-color: #297fb9;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.nav-container nav ul {
+    display: flex;
+
+    list-style: none;
+    margin: 0 1rem;
+}
+
+.nav-container nav ul li {
+    list-style: none;
+}
+
+.nav-container nav ul li a {
+    text-decoration: none;
+    padding: 0.6rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* About section */
+.about-section {
+    text-align: center;
+    padding: 2rem;
+    color: #fff;
+}
+
+.about-section h1 {
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* Contact form */
+.contact-section {
+    text-align: center;
+    padding: 2rem;
+}
+
+.contact-section h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+#contact-form {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact-form label {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    font-size: 1rem;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+#contact-form button {
+    font-size: 1.1rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#contact-form button:hover {
+    background-color: #2980b9;
+}
+
+#contact-form button:active {
+    transform: scale(0.97);
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+    .nav-container nav ul {
+        flex-direction: column;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #contact-form {
+        padding: 1.5rem;
+    }
+}
