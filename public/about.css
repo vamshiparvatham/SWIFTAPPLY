@@ -24,13 +24,8 @@ body {
 
 .nav-container nav ul {
     display: flex;
-
     list-style: none;
     margin: 0 1rem;
-}
-
-.nav-container nav ul li {
-    list-style: none;
 }
 
 .nav-container nav ul li a {
@@ -40,35 +35,56 @@ body {
     font-size: 1.5rem;
 }
 
-/* About section */
-.about-section {
+/* Hero Section */
+.hero-section {
     text-align: center;
-    padding: 2rem;
-    color: #fff;
+    background-color: #0a74da;
+    color: white;
+    padding: 4rem 2rem;
 }
-
-.about-section h1 {
+  
+/* General Section Styling */
+.section {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+  
+.section h2 {
     margin-bottom: 1rem;
+    color: #0dc7fa;
+}
+  
+.section p,
+.section ul,
+.section ol {
+    max-width: 800px;
+    margin: auto;
 }
 
-.about-section p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+ul, ol {
+    margin-top: 22px;
 }
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+ul li, ol li {
+    list-style: none;
+    font-size: 1.5rem;
 }
 
-/* Contact form */
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
 .contact-section {
     text-align: center;
     padding: 2rem;
+    background-color: #3498db;
+    color: #fff;
 }
 
 .contact-section h2 {
@@ -136,12 +152,22 @@ body {
         flex-direction: column;
     }
 
-    .profile-photo {
-        width: 100px;
-        height: 100px;
-    }
-
     #contact-form {
         padding: 1.5rem;
     }
+}
+
+/* Additional small adjustments */
+body {
+    line-height: 1.6;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    max-width: 100%;
+}
+
+input[type="text"] {
+    height: 2.5rem;
 }

@@ -7,18 +7,16 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
-  <!-- navbar -->
-   <div class="nav-container">
+  <div class="nav-container">
     <nav class="navbar">
       <ul>
         <li><a href="#">SwiftApply</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
     </nav>
-   </div>
+  </div>
 
-  <h1>Job Application Automation</h1>
+  <h1 style="color: black; margin: 33px;">Job Application Automation</h1>
   <form id="job-form">
     <label for="email">Email:</label>
     <input type="email" id="email" name="email" required>
@@ -36,12 +34,27 @@
     <input type="text" id="experience" name="experience" required>
     <br>
 
+    <label for="jobType">Job Type:</label>
+    <select id="jobType" name="jobType" required>
+      <option value="">Select Job Type</option>
+      
+      <option value="internship">Internship</option>
+      <option value="job">Job</option>
+
+      
+    </select>
+    <br>
+
     <label for="location">Location:</label>
     <input type="text" id="location" name="location" required>
     <br>
 
     <button type="submit">Apply for Jobs</button>
   </form>
+
+  <footer class="footer">
+    <p>&copy; 2024 SwiftApply. All Rights Reserved.</p>
+</footer>
 
   <script>
     document.getElementById('job-form').addEventListener('submit', async (e) => {
@@ -51,6 +64,7 @@
       const password = document.getElementById('password').value;
       const jobTitle = document.getElementById('jobTitle').value;
       const experience = document.getElementById('experience').value;
+      const jobType = document.getElementById('jobType').value;
       const location = document.getElementById('location').value;
 
       const response = await fetch('/apply-jobs', {
@@ -58,7 +72,7 @@
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email, password, jobTitle, experience, location }),
+        body: JSON.stringify({ email, password, jobTitle, experience, jobType, location }),
       });
 
       const result = await response.json();

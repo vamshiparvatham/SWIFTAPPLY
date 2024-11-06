@@ -1,71 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="about.css">
     <title>About | SwiftApply</title>
 </head>
+
 <body>
-    <div class="container-about">
-        <!-- navbar -->
-        <div class="nav-container">
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html">SwiftApply</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <!-- About section -->
-        <section class="about-section">
-            <h1>About SwiftApply</h1>
-            <p>
-                SwiftApply is an innovative tool designed to automate the job and internship application process,
-                simplifying the steps involved in applying to multiple platforms. Built using the Puppeteer library,
-                SwiftApply navigates job boards, fills out application forms, and submits applications on behalf
-                of the user. It saves time, enhances productivity, and makes it easy to apply for internships
-                in just a few clicks.
-            </p>
-            <img src= "photo.jpg" alt="Vamshi" class="profile-photo">
-        </section>
-
-        <!-- Contact form -->
-        <section class="contact-section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
+    <!-- navbar -->
+    <div class="nav-container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">SwiftApply</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <!-- EmailJS Integration -->
+
+    <header class="hero-section">
+        <h1>Welcome to SwiftApply</h1>
+        <p>Automate your job applications effortlessly.</p>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About SwiftApply</h2>
+        <b>
+            <p>SwiftApply is an innovative tool designed to streamline the job application process using automation
+                powered
+                by Puppeteer. Whether you're applying to dozens of positions or just a few, SwiftApply helps you save
+                time
+                and stay organized.</p>
+        </b>
+    </section>
+
+    <section id="working" class="section">
+        <h2>How It Works</h2>
+        <b>
+            <p>SwiftApply automates the repetitive tasks involved in job applications:</p>
+        </b>
+        <ul>
+            <li>Fills out application forms with your pre-saved data.</li>
+            <li>Handles various form formats with dynamic adaptability.</li>
+            <li>Ensures a seamless application process across multiple platforms.</li>
+        </ul>
+    </section>
+
+    <section id="advantages" class="section">
+        <h2>Advantages</h2>
+        <ul>
+            <li><strong>Time-Saving:</strong> Apply to multiple jobs quickly.</li>
+            <li><strong>Consistency:</strong> Minimize human error by automating data entry.</li>
+            <li><strong>Customizable:</strong> Tailor your application details easily.</li>
+        </ul>
+    </section>
+
+    <section id="setup" class="section">
+        <h2>Getting Started</h2>
+        <b>
+            <p>Follow these simple steps to set up SwiftApply:</p>
+        </b>
+        <ol>
+            <li>Download and install the software from our official repository.</li>
+            <li>Configure your application preferences in the settings panel.</li>
+            <li>Run SwiftApply and watch it automate your job applications!</li>
+        </ol>
+        <p>For more details, visit our documentation page. or contact us</p>
+    </section>
+
+
+    <!-- Contact form -->
+    <section class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        (function(){
+        (function () {
             emailjs.init("yZ4yvXNUg3VU4nGuD"); // Replace "YOUR_USER_ID" with your EmailJS user ID
         })();
 
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
             event.preventDefault();
 
             emailjs.sendForm('service_id12', 'template_6rfcrhv', this) // Replace with your EmailJS service and template IDs
-                .then(function() {
+                .then(function () {
                     alert('Message sent successfully!');
-                }, function(error) {
+                }, function (error) {
                     alert('Failed to send message: ' + JSON.stringify(error));
                 });
         });
     </script>
+    <footer class="footer">
+        <p>&copy; 2024 SwiftApply. All Rights Reserved.</p>
+    </footer>
 </body>
+
 </html>

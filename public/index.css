@@ -100,6 +100,15 @@
     transform: scale(0.97);
   }
   
+  #jobType {
+    padding: 6px;
+    border-radius: 10px;
+    /* background: #d4dfe3; */
+    font-size: 15px;
+    
+    border: none;
+  }
+  
   @media (max-width: 500px) {
     #job-form {
       padding: 2rem;
